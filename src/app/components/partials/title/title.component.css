@@ -1,0 +1,8 @@
+h1 {
+  font-size: 6rem;
+  color: var(--secondary-color);
+  text-shadow: 4px 6px var(--primary-color);
+  padding: 0 0 3rem;
+  text-align: center;
+  letter-spacing: 3px;
+}

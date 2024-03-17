@@ -1,0 +1,13 @@
+<div class="global-wrapper">
+  <app-title pageTitle="CARDÁPIO"/>
+  <ul>
+    <li *ngFor="let food of foods">
+      <a routerLink="/cardapio/{{food.nameId}}">
+        <img src="{{food.imageUrl}}" alt="{{food.name}}" title="{{food.name}}">
+        <h2>{{food.name}}</h2>
+        <star-rating [stars]="food.stars" [size]="1.5" />
+        <span>R$ {{food.price.toFixed(2)}}</span>
+      </a>
+    </li>
+  </ul>
+</div>

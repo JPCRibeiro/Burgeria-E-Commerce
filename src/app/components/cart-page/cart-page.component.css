@@ -1,0 +1,191 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+a:first-child {
+  color: white;
+  font-size: 22px;
+}
+
+a:first-child:hover {
+  text-shadow: 3px 3px var(--secondary-color);
+  transition: 200ms;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem 0 0 1rem;
+  justify-content: center;
+}
+
+ul > div {
+  color: white;
+  font-size: 24px;
+  padding: 1rem 1.5rem 1rem;
+  border-bottom: 3px solid var(--bg-color);
+}
+
+ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid var(--bg-color);
+  height: 100%;
+  padding: 10px;
+}
+
+ul li:last-child{
+ border: none; 
+}
+
+.food-box img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100rem;
+  object-fit: cover;
+  display: flex;
+}
+
+ul li div{
+  text-align: center;
+}
+
+ul li div:not(:first-child){
+  flex-basis: 18%;
+}
+
+.item-price {
+  color: white;
+  font-size: 20px;
+}
+
+.count-change {
+  display: flex;
+  font-family: var(--londrina);
+  color: var(--primary-color);
+  background: white;
+  font-size: 22px;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 1rem;
+  border: none;
+  gap: 1.4rem;
+  justify-content: center;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+}
+
+.count-change img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.count-change div:nth-child(3) {
+  font-family: var(--montserrat);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.count-change div:nth-child(1)::selection, .count-change div:nth-child(3)::selection {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 3;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 0 1rem 1rem 0;
+  border-left: 3px solid var(--bg-color);
+  padding: 1rem;
+  padding-top: 7px;
+}
+
+.checkout > div{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 1rem;
+  text-align: center;
+}
+
+.total-price, .foods-count {
+  font-size: 20px;
+  color: white;
+}
+
+button {
+  font-family: var(--londrina);
+  color: var(--primary-color);
+  background: white;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  width: fit-content;
+  border-radius: 1rem;
+  border: none;
+}
+
+button:hover{
+  background-color: #eeeeee;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.checkout a{
+  padding: 1rem;
+  color: var(--primary-color);
+  background:var(--secondary-color);
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.checkout a:hover{
+  background-color: #bb6824;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+select{
+  background-color: white;
+  color: var(--primary-color);
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-family: var(--londrina);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  ul {
+    border-radius: 1rem 1rem 0 0;
+  }
+  ul li:last-child{
+    border-bottom: 3px solid var(--bg-color);
+  }
+  .checkout {
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+  }
+}

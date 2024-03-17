@@ -1,0 +1,84 @@
+header {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  height: 110px;
+  border-bottom: 10px solid var(--secondary-color);
+  position: relative;
+}
+
+.container {
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.navs {
+  font-size: 28px;
+  color: white;
+}
+
+.logo-name {
+  left: 50%;
+  top: 14%;
+  transform: translate(-50%);
+  z-index: 999;
+  position: absolute;
+  display: flex;
+}
+
+.logo-name:hover, .navs:hover {
+  text-shadow: 3px 3px var(--secondary-color);
+  transition: 200ms;
+}
+
+.logo {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+  position: absolute;
+  display: flex;
+}
+
+.cart-box {
+  display: flex;
+  position: relative;
+}
+
+.cart-box img {
+  display: flex;
+  width: 25px;
+}
+
+.cart-box span {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 100%;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  padding-left: 1px;
+}
+
+/*
+@media screen and (max-width: 768px) {
+  a img {
+    width: 70px;
+    height: 70px;
+    top: 3%;
+  }
+}
+*/

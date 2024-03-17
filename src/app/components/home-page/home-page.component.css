@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-section > div {
+  display: flex;
+  max-width: 1366px;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2.6rem 20px 0;
+}
+
+.hero-section img {
+  width: 38vw;
+}
+
+.hero-section p {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.4vw;
+}
+
+.hero-section svg {
+  display: flex;
+  fill: var(--primary-color);
+  margin-bottom: -3px;
+}
+
+.menu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--primary-color);
+  width: 100%;
+  padding: 2rem 20px 8rem;
+}
+
+.menu-section > div {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-section p {
+  text-align: center;
+  color: white;
+  font-size: 2.2rem;
+}
+
+.menu-section a {
+  font-family: var(--londrina);
+  color: var(--primary-color);
+  background: white;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  width: fit-content;
+  display: flex;
+}
+
+.menu-section a:hover {
+  background-color: #eeeeee;
+  transition: 200ms;
+}
+
+.melt-drop {
+  padding: 0 20px;
+}
+
+.melt-drop img {
+  width: 100%;
+  height: auto;
+}
+
+.app-section {
+  color: var(--primary-color);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 2.2rem;
+  justify-content: center;
+  gap: 3rem;
+  margin: 4rem 0 5rem;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+}
+
+.app-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.platform-app {
+  display: flex;
+  gap: 2rem;
+}
