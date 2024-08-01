@@ -1,5 +1,5 @@
 <div align='center'>
-  <a align='center' href="https://jpcribeiro.github.io/Burgeria/" target="blank"><img align="center" src="./assets/images/burger-logo.svg" height="100" /></a>
+  <a align='center' href="https://jpcribeiro.github.io/Burgeria/" target="blank"><img align="center" src="src/assets/images/burger-logo.svg" height="100" /></a>
 </div>
 
 <h1 align='center'>
