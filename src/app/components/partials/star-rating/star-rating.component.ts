@@ -11,7 +11,6 @@ import { Component, Input } from '@angular/core';
 export class StarRatingComponent {
   @Input() 
   stars!: number;
-  
   @Input() 
   size: number = 1;
 
@@ -26,6 +25,6 @@ export class StarRatingComponent {
   getStarImage(current: number): string{
     const previousHalf = current - 0.5;
     const imageName = this.stars >= current ? 'star-full' : this.stars >= previousHalf ? 'star-half' : 'star-empty';
-    return `/assets/images/stars/${imageName}.svg`;
+    return `./assets/images/stars/${imageName}.svg`;
   }
 }

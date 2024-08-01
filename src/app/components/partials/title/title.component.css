@@ -6,3 +6,9 @@ h1 {
   text-align: center;
   letter-spacing: 3px;
 }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 4.3rem;
+  }
+}

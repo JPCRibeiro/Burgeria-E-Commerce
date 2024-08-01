@@ -1,0 +1,19 @@
+<div class="container global-wrapper">
+  <app-not-found [style.display]="!food.nameId ? 'flex' : 'none'" notFoundMessage="Produto não encontrado!" resetLinkText="Voltar para o cardápio" resetLinkRoute="/cardapio"/>
+  <div *ngIf="food.nameId" [style.display]="food.nameId ? 'flex' : 'none'" class="food-box">
+    <a routerLink="/cardapio">
+      <img src="./assets/images/arrow-left.svg">
+      <div>Voltar</div>
+    </a>
+    <div>
+      <div class="details">
+        <h2 class="food-name">{{food.name}}</h2>
+        <star-rating [stars]="food.stars" [size]="1.5"/>
+        <p>{{food.description}}</p>
+        <span class="food-price">R$ {{food.price.toFixed(2)}}</span>
+        <button (click)="addToCart()">ADICIONAR AO CARRINHO</button>
+      </div>
+      <img src="{{food.imageUrl}}" alt="{{food.name}}" title="{{food.name}}"/>
+    </div>
+  </div>
+</div>

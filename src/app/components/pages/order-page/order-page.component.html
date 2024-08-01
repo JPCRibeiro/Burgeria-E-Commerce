@@ -1,0 +1,38 @@
+<div class="global-wrapper">
+  <div class="container" *ngIf="order">
+    <div class="order-track">
+      <h1>Pedido <span>#</span>{{order.id}}</h1>
+      <div class="details">
+        <div>
+          <strong>Data</strong>
+          <span>{{order.createdAt}}</span>
+        </div>
+        <div>
+          <strong>Nome</strong> 
+          <span>{{order.name}}</span>
+        </div>
+        <div>
+          <strong>Endereço</strong> 
+          <span>{{order.address}}</span>
+        </div>
+        <div>
+          <strong>Telefone</strong> 
+          <span>{{order.phone}}</span>
+        </div>
+        <div>
+          <strong>Pagamento</strong> 
+          <span>{{order.paymentMethod}}</span>
+        </div>
+        <div>
+          <strong>Status</strong> 
+          <span>Em Preparação</span>
+        </div>
+        <div>
+          <strong>Previsão</strong> 
+          <span>{{order.deliveryTime}}</span>
+        </div>
+      </div>
+    </div>
+    <order-items-list [order]="order" [direction]="'column'"></order-items-list>
+  </div>
+</div>

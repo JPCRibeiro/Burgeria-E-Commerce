@@ -1,0 +1,57 @@
+<div class="container global-wrapper">
+  <form [formGroup]="checkoutForm" (ngSubmit)="createOrder()">
+    <div class="input-container">
+      <label for="name">Nome</label>
+      <div class="input-content">
+        <input id="name" formControlName="name" autocomplete="{{'name'}}">
+        <div class="input-validation">
+          <div class="error-list" *ngIf="formSubmitted && checkoutForm.controls['name'].errors?.['required']">Campo obrigatório</div>
+        </div>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="address">Endereço</label>
+      <div class="input-content">
+        <input id="address" formControlName="address" autocomplete="{{'address'}}">
+        <div class="input-validation">
+          <div class="error-list" *ngIf="formSubmitted && checkoutForm.controls['address'].errors?.['required']">Campo obrigatório</div>
+        </div>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="phone">Telefone</label>
+      <div class="input-content">
+        <input id="phone" formControlName="phone" autocomplete="{{'phone'}}" (input)="padraoTelefone($event)" maxlength="15">
+        <div class="input-validation">
+          <div class="error-list" *ngIf="formSubmitted && checkoutForm.controls['phone'].errors?.['required']">
+            Campo obrigatório!
+          </div>
+          <div class="error-list" *ngIf="formSubmitted && checkoutForm.controls['phone'].value && checkoutForm.controls['phone'].value.length !== 15">
+            Preencha o campo todo!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="paymentMethod">Forma de Pagamento (Pagamento na Entrega)</label>
+      <div class="input-content">
+        <select name="paymentMethod" id="paymentMethod" formControlName="paymentMethod">
+          <option value="" hidden>Selecione uma forma de pagamento</option>
+          <option>Dinheiro</option>
+          <option>Mastercard (Débito)</option>
+          <option>Mastercard (Crédito)</option>
+          <option>Visa (Débito)</option>
+          <option>Visa (Crédito)</option>
+          <option>Elo</option>
+        </select>
+        <div class="input-validation">
+          <div class="error-list" *ngIf="formSubmitted && checkoutForm.controls['paymentMethod'].errors?.['required']">Campo obrigatório</div>
+        </div>
+      </div>
+    </div>
+    <button type="submit">
+      Pedir!
+    </button>
+  </form>
+  <order-items-list [order]="order" [size]="70"></order-items-list>
+</div>

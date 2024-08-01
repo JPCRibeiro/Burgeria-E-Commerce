@@ -10,9 +10,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class CartService {
   private cart: Cart = this.getCartFromLocalStorage();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
+  
   constructor() { }
 
-  addToCart(food: Food): void{
+  addToCart(food: Food): void {
     let cartItem = this.cart.items.find(item => item.food.id === food.id);
     
     if (cartItem)
@@ -44,6 +45,10 @@ export class CartService {
 
   getCartObservable(): Observable<Cart> {
     return this.cartSubject.asObservable();
+  }
+
+  getCart(): Cart {
+    return this.cartSubject.value;
   }
 
   private setCartToLocalStorage(): void {

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --primary-color: #1a1e28;
+  --primary-color: #191e2b;
   --secondary-color: #e37a27;
   --montserrat: 'Montserrat', sans-serif;
   --londrina: 'Londrina Solid';
@@ -33,7 +33,7 @@ app-root {
 app-menu-page {
   display: flex;
   flex-direction: column;
-  margin: 0rem 0 4rem
+  margin: 0rem 0 4rem;
 }
 
 app-not-found {
@@ -48,9 +48,24 @@ app-cart-page {
   flex-direction: column;
   min-height: 678px;
   height: 100%;
+  font-weight: 300;
 }
 
 app-food-page {
+  display: flex;
+  min-height: 678px;
+  height: 100%;
+  justify-content: center;
+}
+
+app-payment-page {
+  display: flex;
+  min-height: 678px;
+  height: 100%;
+  justify-content: center;
+}
+
+app-checkout-page {
   display: flex;
   min-height: 678px;
   height: 100%;
